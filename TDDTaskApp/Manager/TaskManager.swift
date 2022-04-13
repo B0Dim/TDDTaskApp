@@ -33,7 +33,7 @@ class TaskManager {
         doneTasks.append(task)
     }
     
-    func doneTasksCount(at index: Int) -> Task {
+    func doneTasks(at index: Int) -> Task {
         return doneTasks[index]
     }
     

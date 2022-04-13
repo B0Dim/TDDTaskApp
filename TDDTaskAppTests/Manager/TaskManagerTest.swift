@@ -71,7 +71,7 @@ class TaskManagerTest: XCTestCase {
         sut.add(task: task)
         
         sut.checkTask(at: 0)
-        let returnedTask = sut.doneTasksCount(at: 0)
+        let returnedTask = sut.doneTasks(at: 0)
         
         XCTAssertEqual(returnedTask, task)
     }

@@ -90,10 +90,23 @@ class DataProviderTests: XCTestCase {
         tableView.register(MockTaskCell.self, forCellReuseIdentifier: String(describing: TaskCell.self))
         
         let task = Task(title: "Foo")
-        sut.taskManager?.add(task: Task(title: "Foo"))
+        sut.taskManager?.add(task: task)
         tableView.reloadData()
         
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockTaskCell
+        
+        XCTAssertEqual(cell.task, task)
+    }
+    
+    func testCellForRowInSectionOneCallsConfigure() {
+        tableView.register(MockTaskCell.self, forCellReuseIdentifier: String(describing: TaskCell.self))
+        
+        let task = Task(title: "Foo")
+        sut.taskManager?.add(task: task)
+        sut.taskManager?.checkTask(at: 0)
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 1)) as! MockTaskCell
         
         XCTAssertEqual(cell.task, task)
     }
