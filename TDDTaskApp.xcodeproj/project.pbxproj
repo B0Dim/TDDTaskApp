@@ -151,7 +151,7 @@
 				08E64E5F28185D5A00BAA71D /* View */,
 				089962A62805E1F600F8CBD1 /* Controller */,
 				0803275F280497CE001B1876 /* Manager */,
-				0803273828048C9C001B1876 /* TDDTaskAppTests.swift */,
+				08BF8B6F283D4AAE004609B9 /* Supporting files */,
 				0803275728048E6B001B1876 /* Model */,
 			);
 			path = TDDTaskAppTests;
@@ -251,6 +251,14 @@
 				085BCC332819B3FD00899256 /* NewTaskViewControllerTests.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		08BF8B6F283D4AAE004609B9 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				0803273828048C9C001B1876 /* TDDTaskAppTests.swift */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 		08E64E5F28185D5A00BAA71D /* View */ = {
