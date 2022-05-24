@@ -12,11 +12,13 @@ class TaskManagerTest: XCTestCase {
 
     var sut: TaskManager!
     
-    override func setUpWithError() throws {
+    override func setUp() {
+        super.setUp()
         sut = TaskManager()
     }
 
-    override func tearDownWithError() throws {
+    override func tearDown() {
+        super.tearDown()
         sut = nil
     }
 
