@@ -15,7 +15,6 @@ class DataProvider: NSObject {
     var taskManager: TaskManager?
 }
 
-
 extension DataProvider: UITableViewDelegate {
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         
@@ -51,7 +50,6 @@ extension DataProvider: UITableViewDataSource {
         case .todo: return taskManager.tasksCount
         case .done: return taskManager.doneTasksCount
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,7 +64,7 @@ extension DataProvider: UITableViewDataSource {
         case .done: task = taskManager.doneTasks(at: indexPath.row)
         }
         
-        cell.configure(withTask: task)
+        cell.configure(withTask: task, done: task.isDone)
         
         return cell
     }
@@ -86,5 +84,4 @@ extension DataProvider: UITableViewDataSource {
         
         tableView.reloadData()
     }
-    
 }

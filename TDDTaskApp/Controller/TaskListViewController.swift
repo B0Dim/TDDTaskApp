@@ -9,7 +9,7 @@ import UIKit
 
 class TaskListViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var dataProvider: DataProvider!
     
     @IBAction func addNewTask(_ sender: UIBarButtonItem) {
